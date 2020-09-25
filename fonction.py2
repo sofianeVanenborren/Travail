@@ -1,0 +1,7 @@
+#exercice 2
+print(float('5.3'))
+print(str(1234))
+res=int('45')
+print(type(res))
+print(int(6.7))
+
