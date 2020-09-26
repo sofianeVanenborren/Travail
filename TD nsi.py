@@ -28,6 +28,33 @@ c=a+b
 a="4*5"
 a=a+'6'
 
+#exercice 10
+
+n1 = 'un' 
+n2 = 'deux'
+print(n1 , n2)
+n3=n1
+n1=n2
+n2=n3
+print(n1 , n2)
+
+#exercice 11
+
+c1=4
+c2=5
+h=((c1)**2 + (c2)**2)
+from math import sqrt
+print(sqrt(h))
+
+#exercice 12
+
+#q1
+
+
+
+
+
+
 
 
 
