@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+
+<head>
+  <title>Premier exemple de document HTML 5</title>
+  <meta charset="UTF-8"/>
+
+  <meta name="author" content="Jean-Christophe Routier"/>
+</head>
+
+<body>
+	<h1>Premier document HTML</h1>
+
+	<p>Le contenu d'un document HTML est construit à partir de <strong>balises</strong>.
+	Elles permettent de structurer le document.
+	</p>
+	<p>
+	Les balises se notent entre chevrons&#xA0;: <q><code>&lt;</code></q> et <q><code>&gt;</code></q> et à toute balise ouvrante est
+	associée une balise fermante.
+	La balise fermante commence en plus par le caractère "<code>/</code>". Entre ces deux balises on place du <strong>contenu</strong>.
+	Ce contenu peut à son tour comporter des balises. Un couple de balise et son contenu constitue un <strong>élément</strong> du document HTML.
+	</p>
+
+	<p>
+	Voici un exemple&#xA0;:
+	<br/>
+		<code>&lt;p&gt; Un exemple utilisant la balise "p" (<i>paragraphe</i>) avec du contenu &lt;/p&gt;</code>.
+	</p>
+
+	<p>La balise ouvrante d'un élément peut-être complétée par des <strong>attributs</strong> qui apportent des informations additionnelles
+	sur l'élément HTML. Les attributs que l'on peut trouver dépendent de l'élément, dans certains cas ils sont obligatoires. La valeur attribuée à un attribut se note entre guillemets <q><code>"</code></q>.
+	<br/>
+	Par exemple l'attribut <code>href</code> d'un élément <code>a</code> permet d'indiquer la cible du lien, il est obligatoire pour un hyperlien,
+	l'attribut <code>title</code> est quant à lui optionnel&#xA0;:
+	<br/>
+		<code>&lt;a href="http://fil.univ-lille1.fr" title="le site des Formations en Informatique de Lille 1"&gt;Le site du FIL&lt;/a&gt;</code>
+		<br/>
+		Résultat&#xA0;: <a href="http://fil.univ-lille1.fr" title="FIL = les Formations en Informatique de Lille 1">Le site du <abbr title="Formations en Informatique de Lille 1">FIL</abbr></a>
+	</p>
+
+	<p>
+	A suivre...
+	</p>
+</body>
+
+</html>
