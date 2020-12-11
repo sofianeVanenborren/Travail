@@ -2,7 +2,7 @@ import geometrie
 import math
 
 def nombre_pots(longueur, largeur, surface_couvrante):
-    aire= (longueur*largeur)/2
+    aire = (longueur*largeur)/2
     return aire
     
     
@@ -10,8 +10,8 @@ def nombre_pots(longueur, largeur, surface_couvrante):
     
 
 def nombre_baches(longueur, largeur, surface_couvrante):
-    nombre_baches = surface_couvrante/longueur*largeur
-    return nombre_baches
+    Nombre_baches = surface_couvrante/longueur*largeur
+    return Nombre_baches
    
     
     
@@ -24,7 +24,9 @@ def nombre_rubans(longueur, largeur, perimetre_couvrante):
     
 
 def salaire(longueur, largeur):
-    salaire = 
+    Salaire = longueur*largeur/7.5
+    return Salaire
+    
     
     
     
@@ -32,11 +34,6 @@ def salaire(longueur, largeur):
     
 
 def est_reparation_couverte(total_couts):
-    """
-    Indique si les réparations sont couvertes
-    paramètre total_couts (float) ; valeur totale des coûuts
-    retour (bool) : True si le forfait couvre l'ensemble des coûts
-    pré-conditions : le total des coûts est strictement positif
-    post-conditions : Néant
-    """
+    côut = 
+    
     return total_couts <= 500
