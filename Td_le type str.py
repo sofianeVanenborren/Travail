@@ -20,3 +20,14 @@ print(var.find(" "))
 print(var.find("p"))
 print(var.find("c'est"))
 print(var.find("z"))
+
+# Exercie 3 : Niveau interédiaire
+def commence_par_majuscule(mot):
+    lettre = mot[0]
+    sortie = lettre.isupper()
+    return sortie
+print(commence_par_majuscule("Bonjour"))
+print(commence_par_majuscule("python"))   
+
+    
+
