@@ -4,7 +4,7 @@ import math
 def nombre_pots(longueur, largeur, surface_couvrante):
     nb_pots = (longueur+largeur+surface_couvrante)
     return nb_pots
-print    
+   
     
 
     
