@@ -1,22 +1,22 @@
 import geometrie
 import math
 
-def nombre_pots(longueur, largeur, surface_couvrante):
-    nb_pots = (longueur+largeur+surface_couvrante)
+def nb_pots(longueur, largeur, surface_couvrante):
+    nb_pots = (longueur+largeur)/surface_couvrante
     return nb_pots
    
     
 
     
 
-def nombre_baches(longueur, largeur, surface_couvrante):
+def nb_baches(longueur, largeur, surface_couvrante):
     nb_baches = surface_couvrante/longueur*largeur
     return nb_baches
    
     
     
 
-def nombre_rubans(longueur, largeur, perimetre_couvrante):
+def nb_rubans(longueur, largeur, perimetre_couvrante):
     nb_rubans = nombre_rubans/perimetre_couvrante
     return nb_rubans
     
