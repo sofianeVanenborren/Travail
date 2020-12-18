@@ -2,38 +2,32 @@ import geometrie
 import math
 
 def nombre_pots(longueur, largeur, surface_couvrante):
-    aire = (longueur*largeur)/2
-    return aire
-    
+    nb_pots = (longueur+largeur+surface_couvrante)
+    return nb_pots
+print    
     
 
     
 
 def nombre_baches(longueur, largeur, surface_couvrante):
-    Nombre_baches = surface_couvrante/longueur*largeur
-    return Nombre_baches
+    nb_baches = surface_couvrante/longueur*largeur
+    return nb_baches
    
     
     
 
 def nombre_rubans(longueur, largeur, perimetre_couvrante):
-    rubans_necessaire = nombre_rubans/perimetre_couvrante
-    return rubans_necessaire
+    nb_rubans = nombre_rubans/perimetre_couvrante
+    return nb_rubans
     
     
     
 
 def salaire(longueur, largeur):
-    Salaire = longueur*largeur/7.5
-    return Salaire
-    
-    
-    
-    
-    
-    
+    salaire = longueur*largeur/7.5
+    return salaire
 
 def est_reparation_couverte(total_couts):
-    côut = 
-    
+    raparation_couverte(nombre_rubans + nombre_pots + nombre_rubans)
+    return reparation_couverte
     return total_couts <= 500
