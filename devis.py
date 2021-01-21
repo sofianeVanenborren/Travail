@@ -32,11 +32,3 @@ def  est_reparation_couverte ( cout_total ): # Nom de la fonction
     
     
 
-def  salaire ( longueur , largeur ):
-    salaire  =  longueur * largeur / 7.5
-    retour  salaire
-
-def  est_reparation_couverte ( total_couts ):
-    raparation_couverte ( nb_rubans * 2,85  +  nombre_pots * 37,90  +  nombre_rubans * 0,95 )
-    retour  reparation_couverte
-    renvoie  total_couts  <=  500
