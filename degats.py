@@ -22,5 +22,5 @@ def salaire(longueur,largeur): # Nom de la fonction "salaire"
     return salaire_peintre # Ici on cherche le salaire du peintre 
 
 def reparation_couverte(total,couts):
-    cout_total = nb_pots + nb_baches + nb_rubans + salaire_peintre
+    cout_total = nb_pots + nb_baches + nb_rubans + salaire_peintre # On aditionne tous les fonctions qu'on a faite depuis le debut
     return cout_total # On cherche grace au couts de tous se qu'on a depuis le début pour savair si la reparation est couverte 

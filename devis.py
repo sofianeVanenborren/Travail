@@ -20,6 +20,15 @@ def  nb_rubans ( longueur , largeur , perimetre_couvrante ): # Nom de lafonction
     nb_rubans  =  nombre_rubans / perimetre_couvrante # Utilisations des 3 variables pour trouver la valeur de "nb_rubans"
     retourne  nb_rubans # Ici on aura le nombre de rubans
 
+def  salaire ( longueur , largeur ): # Nom de la fonction "salaire"
+    salaire  =  longueur * largeur / 7.5  # On multiplie les 2 variables avec le prix que le peintre est payé qui est de 7.5 euros/mois
+    retour  salaire # Ici on aura le salaire 
+
+def  est_reparation_couverte ( cout_total ): # Nom de la fonction
+    raparation_couverte ( nb_rubans * 2,85  +  nombre_pots * 37,90  +  nombre_rubans * 0,95 ) #On aditionne tous les fonctions qu'on a faite depuis le debut
+    return reparation_couverte # Et grace a tous on pourra trouver si la reparation est couverte ou non 
+    return cout_total <=  500
+
     
     
 
