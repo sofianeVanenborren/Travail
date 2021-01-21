@@ -1,13 +1,12 @@
-def aire(longueur, largeur):
-    aire = (longueur*largeur)/2
-    return aire
+def  aire ( longueur , largeur ):
+    aire  = ( longueur * largeur ) / 2
+    retour  aire
 
     
-def perimetre(longueur, largeur):
-    Perimetre=longueur+largeur*(2)
-    return Perimetre
+def  perimetre ( longueur , largeur ):
+    Périmètre = longueur + largeur * ( 2 )
+    retour  Périmètre
 
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
-    
+si  __name__  ==  "__main__" :
+    import  doctest
+    doctest . testmod ()
