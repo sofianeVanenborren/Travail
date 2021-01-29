@@ -50,6 +50,23 @@ def nombreCaracteres(chaine):
         compteur += 1
     print(compteur)   
 nombreCaracteres("chaine")
-print('\n')        
+print('\n')
+
+
+
+#Exercice 5 : Niveau intermediaire
+
+def compterOccurence(mot,c):
+    compteur = 0
+    for lettre in mot:
+        if lettre == c:
+            compteur += 1
+    return compteur
+mot = "Guido Van Rossum"
+lettre = "o"
+print("Il y a" , compterOccurence(mot,'o'), '""' , lettre; '""',' dans ' mot)
+
+
+    
         
-       
+
