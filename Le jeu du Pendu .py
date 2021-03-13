@@ -9,6 +9,7 @@ print(chaine)
 fichier.close()
 
 # Etape n°2
+
 chaine = chaine.replace("é","e")
 chaine = chaine.replace("è","e")
 chaine = chaine.replace("ê","e")
@@ -23,7 +24,24 @@ Mot = len(chaine)-1
 Symbole = chaine.replace(chaine," _")
 print(Mot * Symbole)
 
-# Etape n°3
+# Etape n° 3
 
+lettre=input("Mettre une lettre: ")
+if lettre == chaine:
+    print("Bravo , vous avez trouvé une lettre")
+else:
+    print("Dommage !!!")
+while lettre == chaine:
+    cpt = 10
+    if lettre != chaine:
+        cpt -= 1
+        print("Il vous reste " + str(cpt) + " point de vie")
+    break 
+
+
+
+    
+    
+    
 
 
