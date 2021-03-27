@@ -21,7 +21,7 @@ chaine = chaine.replace("ô","o")
 print("-->",chaine)
 
 Mot = len(chaine)
-Symbole = chaine.replace(chaine," _")
+Symbole = chaine.replace(chaine,"_ ")
 print(int(Mot) * Symbole)
 
 # Etape n° 3
@@ -65,14 +65,4 @@ while tentatives > 0:
       print(">>> Gagné! <<<")
       break
      
-print("\n    * Fin de la partie *    ")
-
-    
-
-        
-    
-
-    
-
-
-    
+print("\n    * Partie Terminé *    ")
