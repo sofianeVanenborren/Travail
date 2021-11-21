@@ -1,10 +1,11 @@
 import random
 class Personnage:
 
-    def __init__(self,nom,points_de_vie):
+    def __init__(self,nom,points_de_vie,capacite):
         self.vie = points_de_vie
         self.nom = nom
-
+        self.power = capacite
+          
     def perd_vie(self):
         if random.random() < 0.5:
             nbPoint = 1
@@ -12,11 +13,12 @@ class Personnage:
             nbPoint = 2
 
         self.vie = self.vie - nbPoint
+        print(self.nom + " à reçu " +str(nbPoint)+ " dégats!")
         return nbPoint
-
+          
 bilbo = Personnage("Bilbo",20)
 gollum = Personnage("Gollum",20)
-frodon = Personnage("Frodon", 20)
+frodon = Personnage("Frodon", 20,)
 araignee = Personnage("Araignée", 10)
 aragorn = Personnage("Aragorn", 10)
 orc = Personnage("Orc", 10)
@@ -36,5 +38,4 @@ def game(perso1, perso2):
         msg = "Les deux combattants sont morts en même temps"
 
     return msg
-
-print(game(araignee,gollum))
+        
