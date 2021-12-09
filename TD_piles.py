@@ -1,3 +1,4 @@
+
 def creer_pile():
     """ Créé une pile vide
     :return: Une pile vide représentée par la liste vide
@@ -11,6 +12,7 @@ def est_vide(p):
     :return: True si p est vide, False sinon
     """
     return p == []
+    
 
 
 def empiler(p, e):
@@ -26,12 +28,12 @@ def empiler(p, e):
 def depiler(p):
     """ Dépile un élément au sommet d'une pile et le renvoie
     :param p: Une pile
-    :return: L'élément au sommet de la pile
+    :return: L'élément au sommet de la pile"
     :Précondition: p est non vide
     """
     assert not est_vide(p), "Impossible de dépiler une pile vide"
     return p.pop()
-
+"""
 # Exercice 1
 def pile_alterne(n):
     p = creer_pile()
@@ -42,7 +44,8 @@ def pile_alterne(n):
             empiler(p,-i)
     return p
 print(pile_alterne(7))
-
+"""
+"""
 #Exercice 2
 def vider_pile(pile):
     while not est_vide(pile):
@@ -64,7 +67,8 @@ def sommet_pile(pile):
         res = depiler(pile)
         empiler(pile,res)
         return res
-
+"""
+"""
 #Exercice 3
 def est_bien_parenthesee(text):
     p = creer_pile()
@@ -80,10 +84,48 @@ def est_bien_parenthesee(text):
 print(est_bien_parenthesee("((())())"))
 print(est_bien_parenthesee("((())"))
 print(est_bien_parenthesee("())("))
+"""
+#Exercie 7
+# Partie 1
 
-#Exercie 4
+def est_balise_fermante(txt):
+    return txt[0] == "<" and txt[1] == "/" and txt[-1] == ">"
 
+def est_paire_balises(c1,c2):
+    if c1[0] == "<" and c1[-1] == ">" and c2[0] == "<" and c2[1] == "/" and c2[-1] == ">":
+        return True
+    else:
+        return False
+print(est_balise_fermante("<div>"))
+print(est_balise_fermante("</div>"))
+print(est_paire_balises("<div>", "</div>"))
+print(est_paire_balises("<div>", "</p>"))
 
+# Partie 2
+
+from myhtml_parser import html_to_str,MyHTMLParser
+
+def verifier_html(txt):
+    p = creer_pile()
+    s = html_to_str("html_ex/ex1.html")
+    parser = MyHTMLParser(s)
+    while parser.has_tag():
+        print(parser.next_tag())
+    for i in txt:
+        if i == "<":
+            empiler(p,"<")
+        else:
+            if i == "</":
+                depiller(p,"</")
+            else:
+                return False
+    return est_vide
+print(verifier_html("html_ex/ex1.html"))
+
+        
+ 
+
+    
             
         
         
