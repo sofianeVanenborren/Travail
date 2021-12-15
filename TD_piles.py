@@ -1,4 +1,3 @@
-
 def creer_pile():
     """ Créé une pile vide
     :return: Une pile vide représentée par la liste vide
@@ -59,7 +58,6 @@ empiler(p,15)
 print(p)
 vider_pile(p)
 print(p)
-
 def sommet_pile(pile):
     if est_vide(pile):
         return None
@@ -111,6 +109,16 @@ def verifier_html(txt):
     parser = MyHTMLParser(s)
     while parser.has_tag():
         print(parser.next_tag())
+    if txt[0]== '<':
+        empiler(p,'<')
+        return s
+    if txt[1]=='</':
+        depiler(p,'</')
+    while txt == s:
+        return True
+    else:
+        return False 
+    '''
     for i in txt:
         if i == "<":
             empiler(p,"<")
@@ -119,17 +127,6 @@ def verifier_html(txt):
                 depiller(p,"</")
             else:
                 return False
-    return est_vide
+    '''
 print(verifier_html("html_ex/ex1.html"))
-
-        
- 
-
-    
-            
-        
-        
-
-
-        
     
