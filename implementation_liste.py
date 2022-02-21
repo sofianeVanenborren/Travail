@@ -3,16 +3,16 @@ from random import randint
 
 # PARTIE 1 - TRAVAIL PRELIMINAIRE Question 2
 arbre_du_cours = [2, [8, [6, [], []], [9, [], []]], [1, [7, [], []], []]]
-show(arbre_du_cours,"arbre_du_cours")
+#show(arbre_du_cours,"arbre_du_cours")
 
 # PARTIE 1 - TRAVAIL PRELIMINAIRE Question 3
 arbre_feuille = [1,[],[]]
-show(arbre_feuille,"feuille")
+#show(arbre_feuille,"feuille")
 
 # # PARTIE 2 - CODE ET TESTS A ECRIRE
 
 arbre_vide = []
-show(arbre_vide,"arbre_vide")
+#show(arbre_vide,"arbre_vide")
 def est_vide(arbre):
     '''
     DOCUMENTATION :
@@ -30,6 +30,7 @@ def est_vide(arbre):
     >>> est_vide(arbre_vide)
     True
     '''
+    # return arbre == []
     if arbre == []:
         return True
     else:
@@ -52,10 +53,10 @@ def est_feuille(arbre):
     >>> est_feuille(arbre_vide)
     False
     
-    >>> est_feuille(arbre_du_cours[1])
-    False
     '''
-    if arbre == [[],[]]:
+    if est_vide(arbre):
+        return False
+    elif arbre[1] == [] and arbre[2] == []:
         return True
     else:
         return False
@@ -66,13 +67,19 @@ def racine(arbre):
     Description de la fontion : Renvoie la valeur du noeud racine
     arbre (list) : Arbre implémenté sous forme de listes imbriquées
     return (int, str, etc...) : Valeur du noeud racine
-    précondition : A compléter
+    précondition : l'arbre ne doit pas être vide 
     
     TESTS :
+    >>> racine(arbre_du_cours)
+    2
+    
+    >>> racine(arbre_feuille)
+    1
     '''
     # Vérification de la précondition (voir énoncé : remarques importantes sur le travail)
-    assert ..., " " # A compléter
+    assert not est_vide(arbre), "l'arbre ne doit pas être vide" # A compléter
     # Code de la fonction à compléter
+    return arbre[0]
 
 def SAG(arbre):
     '''
@@ -80,13 +87,16 @@ def SAG(arbre):
     Description de la fontion : Renvoie le sous-arbre gauche de l'arbre
     arbre (list) : Arbre implémenté sous forme de listes imbriquées
     return (list) : sous-arbre gauche
-    précondition : A compléter
+    précondition : le sous-arbre gauche ne doit pas être vide 
     
     TESTS :
+    >>> SAG(arbre_du_cours)
+    [8, [6, [], []], [9, [], []]]
     '''
     # Vérification de la précondition (voir énoncé : remarques importantes sur le travail)
-    assert ..., " " # A compléter
+    assert not est_vide(arbre[1]), "le sous arbre gauche ne doit pas être vide" # A compléter
     # Code de la fonction à compléter
+    return arbre[1]
 
 def SAD(arbre):
     '''
@@ -94,13 +104,16 @@ def SAD(arbre):
     Description de la fontion : Renvoie le sous-arbre droit de l'arbre
     arbre (list) : Arbre implémenté sous forme de listes imbriquées
     return (list) : sous-arbre droit
-    précondition : A compléter
+    précondition : le sous-arbre droit ne doit pas être vide 
     
     TESTS :
+    >>> SAD(arbre_du_cours)
+    [1, [7, [], []], []]
     '''
     # Vérification de la précondition (voir énoncé : remarques importantes sur le travail) 
-    assert ..., " " # A compléter
+    assert not est_vide(arbre[2]), "le sous-arbre droit ne doit pas être vide" # A compléter
     # Code de la fonction à compléter
+    return arbre[2]
 
 def taille(arbre):
     '''
@@ -110,8 +123,17 @@ def taille(arbre):
     return (int) : Taille de l'arbre
     
     TESTS :
+    >>> taille(arbre_du_cours)
+    6
+    >>> taille(arbre_feuille)
+    1
+    >>> taille(arbre_vide)
+    0
     '''
-    # A compléter
+    if not est_vide(arbre):
+        return 0
+    else:
+        return 1 + taille(SAG) + taille(SAD)
 
 def hauteur(arbre):
     '''
