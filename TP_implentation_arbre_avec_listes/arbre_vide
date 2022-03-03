@@ -1,0 +1,13 @@
+/*
+  Binary Tree
+
+  Date: Mon Feb 21 14:46:20 2022
+
+*/
+
+graph G {
+	bgcolor="#FFFFFF";
+
+	"N()" [color="#FFFFFF", label=""];
+
+}
