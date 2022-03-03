@@ -1,0 +1,37 @@
+/*
+  Binary Tree
+
+  Date: Thu Feb 24 09:37:47 2022
+
+*/
+
+graph G {
+	bgcolor="#FFFFFF";
+
+	"N()" [label="2"];
+	"N(0)" [label="8"];
+	"N(00)" [label="6"];
+	"N(000)" [color="#FFFFFF", label=""];
+	"N(00)" -- "N(000)" [color="#FFFFFF", label="", fontsize="8"];
+	"N(001)" [color="#FFFFFF", label=""];
+	"N(00)" -- "N(001)" [color="#FFFFFF", label="", fontsize="8"];
+	"N(0)" -- "N(00)" [color="#000000", label="", fontsize="8"];
+	"N(01)" [label="9"];
+	"N(010)" [color="#FFFFFF", label=""];
+	"N(01)" -- "N(010)" [color="#FFFFFF", label="", fontsize="8"];
+	"N(011)" [color="#FFFFFF", label=""];
+	"N(01)" -- "N(011)" [color="#FFFFFF", label="", fontsize="8"];
+	"N(0)" -- "N(01)" [color="#000000", label="", fontsize="8"];
+	"N()" -- "N(0)" [color="#000000", label="", fontsize="8"];
+	"N(1)" [label="1"];
+	"N(10)" [label="7"];
+	"N(100)" [color="#FFFFFF", label=""];
+	"N(10)" -- "N(100)" [color="#FFFFFF", label="", fontsize="8"];
+	"N(101)" [color="#FFFFFF", label=""];
+	"N(10)" -- "N(101)" [color="#FFFFFF", label="", fontsize="8"];
+	"N(1)" -- "N(10)" [color="#000000", label="", fontsize="8"];
+	"N(11)" [color="#FFFFFF", label=""];
+	"N(1)" -- "N(11)" [color="#FFFFFF", label="", fontsize="8"];
+	"N()" -- "N(1)" [color="#000000", label="", fontsize="8"];
+
+}
